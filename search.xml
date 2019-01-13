@@ -2,32 +2,6 @@
 <search>
   <entry>
     <title><![CDATA[test2]]></title>
-    <url>%2F2019%2F01%2F13%2Fcopyright_%20true%2F</url>
-    <content type="text"><![CDATA[#include #include #include #include #include #include #include #include #include #include #includeusing namespace std;typedef long long LL;typedef pair&lt;int, int&gt; PII;const int MaxN = 1e6 + 5;const int INF = 0x3f3f3f3f; int n, m, k;vector day[MaxN]; struct sgtree { #define ls o &lt;&lt; 1 #define rs ls | 1 LL cnt[4 MaxN], cost[4 MaxN]; //当前节点的CPU的 数量 和 总价格 PII val; void pushUP(int o) { cnt[o] = cnt[ls] + cnt[rs]; cost[o] = cost[ls] + cost[rs]; } void update(int o, int l, int r) { if(l == r) { cnt[o] += val.first; cost[o] += 1LL val.first val.second; return; } int mid = (l + r) &gt;&gt; 1; if(val.second &lt;= mid) update(ls, l, mid); else update(rs, mid + 1, r); pushUP(o); } LL query(int o, int l, int r, int ned) { if(cnt[o] &lt;= ned) return cost[o]; //当前l~r的总个数小于需要的个数，就全买 if(l == r) return 1LL ned l; //查询到最底层后，就全买价格为l的 int mid = (l + r) &gt;&gt; 1; //如果l~mid的个数大于我所需要的，就从此区间选择 if(cnt[ls] &gt;= ned) return query(ls, l, mid, ned); //否则先把便宜的全买了，再去右边的区间查询 return cost[ls] + query(rs, mid+1, r, ned - cnt[ls]); }}tree;`]]></content>
-      <categories>
-        <category>Hexo</category>
-        <category>Biu</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>NexT</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[test]]></title>
-    <url>%2F2019%2F01%2F13%2Ftest%2F</url>
-    <content type="text"><![CDATA[sxawwwwwwwwwwwwww]]></content>
-      <categories>
-        <category>Hexo</category>
-        <category>Biu</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>NexT</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[test2]]></title>
     <url>%2F2019%2F01%2F13%2Ftest2%2F</url>
     <content type="text"><![CDATA[123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051#include&lt;cstdio&gt;#include&lt;cstdlib&gt;#include&lt;cstring&gt;#include&lt;cmath&gt;#include&lt;iostream&gt;#include&lt;string&gt;#include&lt;algorithm&gt;#include&lt;queue&gt;#include&lt;vector&gt;#include&lt;map&gt;#include&lt;set&gt;using namespace std;typedef long long LL;typedef pair&lt;int, int&gt; PII;const int MaxN = 1e6 + 5;const int INF = 0x3f3f3f3f;int n, m, k;vector&lt;PII&gt; day[MaxN];struct sgtree &#123; #define ls o &lt;&lt; 1 #define rs ls | 1 LL cnt[4 * MaxN], cost[4 * MaxN]; //当前节点的CPU的 数量 和 总价格 PII val; void pushUP(int o) &#123; cnt[o] = cnt[ls] + cnt[rs]; cost[o] = cost[ls] + cost[rs]; &#125; void update(int o, int l, int r) &#123; if(l == r) &#123; cnt[o] += val.first; cost[o] += 1LL * val.first * val.second; return; &#125; int mid = (l + r) &gt;&gt; 1; if(val.second &lt;= mid) update(ls, l, mid); else update(rs, mid + 1, r); pushUP(o); &#125; LL query(int o, int l, int r, int ned) &#123; if(cnt[o] &lt;= ned) return cost[o]; //当前l~r的总个数小于需要的个数，就全买 if(l == r) return 1LL * ned * l; //查询到最底层后，就全买价格为l的 int mid = (l + r) &gt;&gt; 1; //如果l~mid的个数大于我所需要的，就从此区间选择 if(cnt[ls] &gt;= ned) return query(ls, l, mid, ned); //否则先把便宜的全买了，再去右边的区间查询 return cost[ls] + query(rs, mid+1, r, ned - cnt[ls]); &#125;&#125;tree;`]]></content>
       <categories>
@@ -38,10 +12,5 @@
         <tag>Hexo</tag>
         <tag>NexT</tag>
       </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2F2019%2F01%2F09%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
   </entry>
 </search>
