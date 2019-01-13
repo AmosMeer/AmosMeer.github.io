@@ -376,6 +376,223 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://amosmeer.github.io/2019/01/13/copyright_ true/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="AmosMeer">
+      <meta itemprop="description" content="Welcome to my blog.">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="AmosMeer' blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/01/13/copyright_ true/" class="post-title-link" itemprop="url">test2</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-01-13 14:15:58 / 修改时间：17:02:50" itemprop="dateCreated datePublished" datetime="2019-01-13T14:15:58+08:00">2019-01-13</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Hexo/Biu/" itemprop="url" rel="index"><span itemprop="name">Biu</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">1.2k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p> #include<cstdio></cstdio></p>
+<p> #include<cstdlib></cstdlib></p>
+<p> #include<cstring></cstring></p>
+<p> #include<cmath></cmath></p>
+<p> #include<iostream></iostream></p>
+<p> #include<string></string></p>
+<p> #include<algorithm></algorithm></p>
+<p> #include<queue></queue></p>
+<p> #include<vector></vector></p>
+<p> #include<map></map></p>
+<p> #include<set><br>using namespace std;<br>typedef long long LL;<br>typedef pair&lt;int, int&gt; PII;<br>const int MaxN = 1e6 + 5;<br>const int INF = 0x3f3f3f3f;</set></p>
+<p>int n, m, k;<br>vector<pii> day[MaxN];</pii></p>
+<p>struct sgtree {</p>
+<p> #define ls o &lt;&lt; 1</p>
+<p> #define rs ls | 1<br>    LL cnt[4 <em> MaxN], cost[4 </em> MaxN]; //当前节点的CPU的 数量 和 总价格<br>    PII val;<br>    void pushUP(int o) {<br>        cnt[o] = cnt[ls] + cnt[rs];<br>        cost[o] = cost[ls] + cost[rs];<br>    }<br>    void update(int o, int l, int r) {<br>        if(l == r) {<br>            cnt[o] += val.first;<br>            cost[o] += 1LL <em> val.first </em> val.second;<br>            return;<br>        }<br>        int mid = (l + r) &gt;&gt; 1;<br>        if(val.second &lt;= mid) update(ls, l, mid);<br>        else update(rs, mid + 1, r);<br>        pushUP(o);<br>    }<br>    LL query(int o, int l, int r, int ned) {<br>        if(cnt[o] &lt;= ned) return cost[o]; //当前l~r的总个数小于需要的个数，就全买<br>        if(l == r) return 1LL <em> ned </em> l;  //查询到最底层后，就全买价格为l的<br>        int mid = (l + r) &gt;&gt; 1;<br>        //如果l~mid的个数大于我所需要的，就从此区间选择<br>        if(cnt[ls] &gt;= ned) return query(ls, l, mid, ned);<br>        //否则先把便宜的全买了，再去右边的区间查询<br>        return cost[ls] + query(rs, mid+1, r, ned - cnt[ls]);<br>    }<br>}tree;<br>`</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    <div>
+      
+   </div>
+
+<div>
+      
+</div>
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://amosmeer.github.io/2019/01/13/test/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -516,6 +733,208 @@
           
             <p>sxawwwwwwwwwwwwww</p>
 
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    <div>
+      
+   </div>
+
+<div>
+      
+</div>
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://amosmeer.github.io/2019/01/13/test2/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="AmosMeer">
+      <meta itemprop="description" content="Welcome to my blog.">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="AmosMeer' blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/01/13/test2/" class="post-title-link" itemprop="url">test2</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-01-13 14:15:58 / 修改时间：17:07:19" itemprop="dateCreated datePublished" datetime="2019-01-13T14:15:58+08:00">2019-01-13</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Hexo/Biu/" itemprop="url" rel="index"><span itemprop="name">Biu</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">1.4k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> LL;</span><br><span class="line"><span class="keyword">typedef</span> pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; PII;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MaxN = <span class="number">1e6</span> + <span class="number">5</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> INF = <span class="number">0x3f3f3f3f</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n, m, k;</span><br><span class="line"><span class="built_in">vector</span>&lt;PII&gt; day[MaxN];</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">sgtree</span> &#123;</span></span><br><span class="line"> <span class="meta">#<span class="meta-keyword">define</span> ls o &lt;&lt; 1</span></span><br><span class="line"> <span class="meta">#<span class="meta-keyword">define</span> rs ls | 1</span></span><br><span class="line">	LL cnt[<span class="number">4</span> * MaxN], cost[<span class="number">4</span> * MaxN]; <span class="comment">//当前节点的CPU的 数量 和 总价格</span></span><br><span class="line">	PII val;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">pushUP</span><span class="params">(<span class="keyword">int</span> o)</span> </span>&#123;</span><br><span class="line">		cnt[o] = cnt[ls] + cnt[rs];</span><br><span class="line">		cost[o] = cost[ls] + cost[rs];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">update</span><span class="params">(<span class="keyword">int</span> o, <span class="keyword">int</span> l, <span class="keyword">int</span> r)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(l == r) &#123;</span><br><span class="line">			cnt[o] += val.first;</span><br><span class="line">			cost[o] += <span class="number">1L</span>L * val.first * val.second;</span><br><span class="line">			<span class="keyword">return</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">int</span> mid = (l + r) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">if</span>(val.second &lt;= mid) update(ls, l, mid);</span><br><span class="line">		<span class="keyword">else</span> update(rs, mid + <span class="number">1</span>, r);</span><br><span class="line">		pushUP(o);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function">LL <span class="title">query</span><span class="params">(<span class="keyword">int</span> o, <span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> ned)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(cnt[o] &lt;= ned) <span class="keyword">return</span> cost[o]; <span class="comment">//当前l~r的总个数小于需要的个数，就全买</span></span><br><span class="line">		<span class="keyword">if</span>(l == r) <span class="keyword">return</span> <span class="number">1L</span>L * ned * l;  <span class="comment">//查询到最底层后，就全买价格为l的</span></span><br><span class="line">		<span class="keyword">int</span> mid = (l + r) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">		<span class="comment">//如果l~mid的个数大于我所需要的，就从此区间选择</span></span><br><span class="line">		<span class="keyword">if</span>(cnt[ls] &gt;= ned) <span class="keyword">return</span> query(ls, l, mid, ned); 		</span><br><span class="line">		<span class="comment">//否则先把便宜的全买了，再去右边的区间查询</span></span><br><span class="line">		<span class="keyword">return</span> cost[ls] + query(rs, mid+<span class="number">1</span>, r, ned - cnt[ls]); </span><br><span class="line">	&#125;</span><br><span class="line">&#125;tree;</span><br><span class="line">`</span><br></pre></td></tr></table></figure>
           
         
       
@@ -791,7 +1210,7 @@
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -883,7 +1302,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">0k</span>
+    <span title="站点总字数">3k</span>
   
 
   
@@ -892,7 +1311,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">1 分钟</span>
+    <span title="站点阅读时长">3 分钟</span>
   
 </div>
 
@@ -913,6 +1332,32 @@
 
 
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+  
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
 
 
 
@@ -1374,13 +1819,7 @@
   
 
 
-<div class="bg_content">
-  <canvas id="canvas"></canvas>
-</div>
-
-</body>
-
+undefined
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"live2d-widget-model-wanko"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false}});</script></body>
 </html>
-
-<script type="text/javascript" src="/js/src/dynamic_bg.js"></script>
 

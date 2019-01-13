@@ -1,21 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title><![CDATA[test]]></title>
-    <url>%2F2019%2F01%2F13%2Ftest%2F</url>
-    <content type="text"><![CDATA[sxawwwwwwwwwwwwww]]></content>
+<search> 
+  
+  
+    
+    <entry>
+      <title>test2</title>
+      <link href="/2019/01/13/copyright_%20true/"/>
+      <url>/2019/01/13/copyright_%20true/</url>
+      
+        <content type="html"><![CDATA[<p> #include<cstdio></cstdio></p><p> #include<cstdlib></cstdlib></p><p> #include<cstring></cstring></p><p> #include<cmath></cmath></p><p> #include<iostream></iostream></p><p> #include<string></string></p><p> #include<algorithm></algorithm></p><p> #include<queue></queue></p><p> #include<vector></vector></p><p> #include<map></map></p><p> #include<set><br>using namespace std;<br>typedef long long LL;<br>typedef pair&lt;int, int&gt; PII;<br>const int MaxN = 1e6 + 5;<br>const int INF = 0x3f3f3f3f;</set></p><p>int n, m, k;<br>vector<pii> day[MaxN];</pii></p><p>struct sgtree {</p><p> #define ls o &lt;&lt; 1</p><p> #define rs ls | 1<br>    LL cnt[4 <em> MaxN], cost[4 </em> MaxN]; //当前节点的CPU的 数量 和 总价格<br>    PII val;<br>    void pushUP(int o) {<br>        cnt[o] = cnt[ls] + cnt[rs];<br>        cost[o] = cost[ls] + cost[rs];<br>    }<br>    void update(int o, int l, int r) {<br>        if(l == r) {<br>            cnt[o] += val.first;<br>            cost[o] += 1LL <em> val.first </em> val.second;<br>            return;<br>        }<br>        int mid = (l + r) &gt;&gt; 1;<br>        if(val.second &lt;= mid) update(ls, l, mid);<br>        else update(rs, mid + 1, r);<br>        pushUP(o);<br>    }<br>    LL query(int o, int l, int r, int ned) {<br>        if(cnt[o] &lt;= ned) return cost[o]; //当前l~r的总个数小于需要的个数，就全买<br>        if(l == r) return 1LL <em> ned </em> l;  //查询到最底层后，就全买价格为l的<br>        int mid = (l + r) &gt;&gt; 1;<br>        //如果l~mid的个数大于我所需要的，就从此区间选择<br>        if(cnt[ls] &gt;= ned) return query(ls, l, mid, ned);<br>        //否则先把便宜的全买了，再去右边的区间查询<br>        return cost[ls] + query(rs, mid+1, r, ned - cnt[ls]);<br>    }<br>}tree;<br>`</p>]]></content>
+      
+      
       <categories>
-        <category>Hexo</category>
-        <category>Biu</category>
+          
+          <category> Hexo </category>
+          
+          <category> Biu </category>
+          
       </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>NexT</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2F2019%2F01%2F09%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
-  </entry>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> NexT </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>test</title>
+      <link href="/2019/01/13/test/"/>
+      <url>/2019/01/13/test/</url>
+      
+        <content type="html"><![CDATA[<p>sxawwwwwwwwwwwwww</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Hexo </category>
+          
+          <category> Biu </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> NexT </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>test2</title>
+      <link href="/2019/01/13/test2/"/>
+      <url>/2019/01/13/test2/</url>
+      
+        <content type="html"><![CDATA[<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> LL;</span><br><span class="line"><span class="keyword">typedef</span> pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; PII;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MaxN = <span class="number">1e6</span> + <span class="number">5</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> INF = <span class="number">0x3f3f3f3f</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n, m, k;</span><br><span class="line"><span class="built_in">vector</span>&lt;PII&gt; day[MaxN];</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">sgtree</span> &#123;</span></span><br><span class="line"> <span class="meta">#<span class="meta-keyword">define</span> ls o &lt;&lt; 1</span></span><br><span class="line"> <span class="meta">#<span class="meta-keyword">define</span> rs ls | 1</span></span><br><span class="line">LL cnt[<span class="number">4</span> * MaxN], cost[<span class="number">4</span> * MaxN]; <span class="comment">//当前节点的CPU的 数量 和 总价格</span></span><br><span class="line">PII val;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">pushUP</span><span class="params">(<span class="keyword">int</span> o)</span> </span>&#123;</span><br><span class="line">cnt[o] = cnt[ls] + cnt[rs];</span><br><span class="line">cost[o] = cost[ls] + cost[rs];</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">update</span><span class="params">(<span class="keyword">int</span> o, <span class="keyword">int</span> l, <span class="keyword">int</span> r)</span> </span>&#123;</span><br><span class="line"><span class="keyword">if</span>(l == r) &#123;</span><br><span class="line">cnt[o] += val.first;</span><br><span class="line">cost[o] += <span class="number">1L</span>L * val.first * val.second;</span><br><span class="line"><span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> mid = (l + r) &gt;&gt; <span class="number">1</span>;</span><br><span class="line"><span class="keyword">if</span>(val.second &lt;= mid) update(ls, l, mid);</span><br><span class="line"><span class="keyword">else</span> update(rs, mid + <span class="number">1</span>, r);</span><br><span class="line">pushUP(o);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">LL <span class="title">query</span><span class="params">(<span class="keyword">int</span> o, <span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> ned)</span> </span>&#123;</span><br><span class="line"><span class="keyword">if</span>(cnt[o] &lt;= ned) <span class="keyword">return</span> cost[o]; <span class="comment">//当前l~r的总个数小于需要的个数，就全买</span></span><br><span class="line"><span class="keyword">if</span>(l == r) <span class="keyword">return</span> <span class="number">1L</span>L * ned * l;  <span class="comment">//查询到最底层后，就全买价格为l的</span></span><br><span class="line"><span class="keyword">int</span> mid = (l + r) &gt;&gt; <span class="number">1</span>;</span><br><span class="line"><span class="comment">//如果l~mid的个数大于我所需要的，就从此区间选择</span></span><br><span class="line"><span class="keyword">if</span>(cnt[ls] &gt;= ned) <span class="keyword">return</span> query(ls, l, mid, ned); </span><br><span class="line"><span class="comment">//否则先把便宜的全买了，再去右边的区间查询</span></span><br><span class="line"><span class="keyword">return</span> cost[ls] + query(rs, mid+<span class="number">1</span>, r, ned - cnt[ls]); </span><br><span class="line">&#125;</span><br><span class="line">&#125;tree;</span><br><span class="line">`</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Hexo </category>
+          
+          <category> Biu </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> NexT </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2019/01/09/hello-world/"/>
+      <url>/2019/01/09/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
 </search>
