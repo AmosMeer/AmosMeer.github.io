@@ -1,12 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[DFS、期望// Codeforces Round 428 (Div. 2) C. Journey]]></title>
+    <url>%2F2019%2F01%2F17%2FDFS%E3%80%81%E6%9C%9F%E6%9C%9B%20Codeforces%20Round%20428%20(Div.%202)%2F</url>
+    <content type="text"><![CDATA[题目链接：https://codeforces.com/contest/839/problem/CC. JourneyThere are n cities and n - 1 roads in the Seven Kingdoms, each road connects two cities and we can reach any city from any other by the roads.Theon and Yara Greyjoy are on a horse in the first city, they are starting traveling through the roads. But the weather is foggy, so they can’t see where the horse brings them. When the horse reaches a city (including the first one), it goes to one of the cities connected to the current city. But it is a strange horse, it only goes to cities in which they weren’t before. In each such city, the horse goes with equal probabilities and it stops when there are no such cities.Let the length of each road be 1. The journey starts in the city 1. What is the expected length (expected value of length) of their journey? You can read about expected (average) value by the link https://en.wikipedia.org/wiki/Expected_value. InputThe first line contains a single integer n (1 ≤ n ≤ 100000) — number of cities.Then n - 1 lines follow. The i-th line of these lines contains two integers ui and vi (1 ≤ ui, vi ≤ n, ui ≠ vi) — the cities connected by the i-th road.It is guaranteed that one can reach any city from any other by the roads. OutputPrint a number — the expected length of their journey. The journey starts in the city 1.Your answer will be considered correct if its absolute or relative error does not exceed 10 - 6. Description由 n 个顶点 n-1 条边构成的以 1 为根的树，从根出发，等概率的往其子树走，求走过的路径长度的期望。 SolutionDFS.例如：对5、6、7号结点期望求和即可。 需要注意的是，除了 1 号结点之外，其余结点均有父节点，所以在求其子树时需要减一，减去父节点，即：G[x].size()-1。 Code12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455#pragma GCC diagnostic error "-std=c++11"#include &lt;cstdio&gt;#include &lt;cstring&gt;#include &lt;string&gt;#include &lt;cmath&gt;#include &lt;cstdlib&gt;#include &lt;ctime&gt;#include &lt;iostream&gt;#include &lt;algorithm&gt;#include &lt;vector&gt;#include &lt;queue&gt;#include &lt;stack&gt;#include &lt;set&gt;#include &lt;map&gt;#define fi first#define se second#define mst(a, b) memset(a, b, sizeof(a))using namespace std;typedef long long LL;typedef pair&lt;int, int&gt; PII;const int INF = 0x3f3f3f3f;const double eps = 1e-9;const int Mod = 1e9 + 7;const int MaxN = 1e5 + 5;vector&lt;int&gt; G[MaxN];int vis[MaxN];int n;double DFS(int x) &#123; vis[x] = 1; double sum = 0.0; for(int i = 0; i &lt; G[x].size(); i++) &#123; int u = G[x][i]; if(!vis[u]) &#123; sum += DFS(u) + 1; &#125; &#125; int p = G[x].size() - (x != 1); return p ? (sum / p) : 0;&#125;int main()&#123; //ios::sync_with_stdio(false); cin.tie(0); cout.tie(0); scanf("%d", &amp;n); for(int i = 1; i &lt; n; i++) &#123; int u, v; scanf("%d %d", &amp;u, &amp;v); G[u].push_back(v); G[v].push_back(u); &#125; printf("%.6lf\n", DFS(1)); return 0;&#125;]]></content>
+      <categories>
+        <category>DFS</category>
+      </categories>
+      <tags>
+        <tag>DFS</tag>
+        <tag>期望</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[利用 Github Pages 和 Hexo 搭建博客常见问题解决]]></title>
     <url>%2F2019%2F01%2F09%2F%E5%88%A9%E7%94%A8%20Github%20Pages%20%E5%92%8C%20Hexo%20%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%2F</url>
     <content type="text"><![CDATA[欢迎各位大佬来参观我的博客：AmosMeer’s Blog搭建过程中出现的任何问题请参考博客：常见问题解决完整的博客搭建过程的文章汇总： 利用 Github Pages 和 Hexo 初步搭建博客 博客的美化配置（NexT主题） 博客的功能配置 利用 Github Pages 和 Hexo 搭建博客常见问题解决 常见 Hexo 命令 说明：hexo 下的 _config.yml 称为站点配置文件themes/next 中 的_config.yml 称为主题配置文件 语言不生效问题在站点配置文件中设置语言 language: zh-Hans // 这里设置语言为 简体中文 如果不起作用的话，查看 themes/next/languages/ 目录下是否有zh-Hans.yml 文件。如果没有的话需要把 zh-CN.yml 文件改成名字为 zh-Hans.yml 就可以了。 出现 npm: command not found有 git bash，也安装了 node.js, 但是在运行 bash 时依旧会报错 npm: command not found解决方案：需要改成全局安装。npm install grunt ：本地安装npm install -g grunt-cli ：全局安装在cmd 下输入以下内容就可以了： npm install -g grunt-cli 创建新的SSH密钥时创建失败解决方案：如果创建位置位于C盘，可以尝试以管理员的身份运行 Git Bash Here 出现 bash: cd: too many arguments命令中存在空格，如果是不必要空格直接删掉就好，若果是路径名或者变量中间有空格时，需要用双引号括起来。 Git 密钥认证 github 时出现错误 $ ssh -T git@github.comThe authenticity of host ‘github.com (192.30.255.112)’ can’t be established.RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKY8.Are you sure you want to continue connecting (yes/no)? 解决方案：直接输入 yes 回车，这时在ssh目录下除 id_rsa，id_rsa.pub 文件外，还会生成一个know_hosts 文件。 出现 ERROR Deployer not found: git执行 hexo g -d 时出现报错 ERROR Deployer not found: git，说明你的 deployer 没有安装成功，需要执行如下命令再安装一次： npm install hexo-deployer-git –save 这样，再执行 hexo g -d，博客就部署到 Github 上了 hexo更换主题后出现 WARN No layout: index.html解决方案： 检查下载的主题是不是放在了 themes 文件夹下面。比如 next 主题的放置，就是点开 themes 就看到 next 的文件夹，next 下面就是主题的文件，不能打开 next 文件夹里面还有 themes。 检查站点配置 _config.yml 是否正确：theme: 主题名字 这里是 theme，不是themes theme 与主题名直接有一个空格（冒号后面有空格） 主题名字是否与themes文件夹下的主题的名字一致 乱码问题如果是记事本编辑后出现了乱码，尝试使用另存为更换编码方式为 utf-8]]></content>
       <categories>
         <category>未分类</category>
       </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[博客的功能配置]]></title>
@@ -15,6 +30,9 @@
       <categories>
         <category>未分类</category>
       </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[常见Hexo命令]]></title>
@@ -23,6 +41,9 @@
       <categories>
         <category>未分类</category>
       </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[利用 Github Pages 和 Hexo 初步搭建博客]]></title>
@@ -31,6 +52,9 @@
       <categories>
         <category>未分类</category>
       </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[博客的美化配置（NexT主题）]]></title>
@@ -39,6 +63,9 @@
       <categories>
         <category>未分类</category>
       </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[线段树// 2018-2019 ICPC,NEERC,Southern Subregional Contest (Online Mirror, ACM-ICPC）C. Cloud Computing]]></title>
