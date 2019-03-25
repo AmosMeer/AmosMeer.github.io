@@ -151,23 +151,25 @@
 
 
 
-  <meta name="description" content="Welcome to my blog.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="AmosMeer&#39; blog">
-<meta property="og:url" content="http://amosmeer.cn/archives/2019/01/index.html">
+  <meta name="description" content="快速分解质因数在做题时经常遇到要分解质因数，那么如何快速分解质因数呢？ 在用筛法求素数时，我们使用线性筛的方法，并在每次筛的过程中，记录下每个数的最小质因数。那么在分解质因数的时候，只需要不断除以当前数的最小质因数，就可以快速得到分解的质因数了。 给出一个简单的例子，比如我们要求 50 这个数的质因数： 首先，利用线性筛找到所有的素数，并记录非素数的最小质因数，然后再将数字 50 除以他的最小质因">
+<meta name="keywords" content="分解质因数,数论">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【数论】快速分解质因数的技巧 &amp;&amp; 筛法求素数（快速筛）">
+<meta property="og:url" content="http://amosmeer.cn/2018/09/17/【数论】快速分解质因数的技巧 && 筛法求素数（快速筛）/index.html">
 <meta property="og:site_name" content="AmosMeer&#39; blog">
-<meta property="og:description" content="Welcome to my blog.">
+<meta property="og:description" content="快速分解质因数在做题时经常遇到要分解质因数，那么如何快速分解质因数呢？ 在用筛法求素数时，我们使用线性筛的方法，并在每次筛的过程中，记录下每个数的最小质因数。那么在分解质因数的时候，只需要不断除以当前数的最小质因数，就可以快速得到分解的质因数了。 给出一个简单的例子，比如我们要求 50 这个数的质因数： 首先，利用线性筛找到所有的素数，并记录非素数的最小质因数，然后再将数字 50 除以他的最小质因">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-03-25T08:56:46.042Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="AmosMeer&#39; blog">
-<meta name="twitter:description" content="Welcome to my blog.">
+<meta name="twitter:title" content="【数论】快速分解质因数的技巧 &amp;&amp; 筛法求素数（快速筛）">
+<meta name="twitter:description" content="快速分解质因数在做题时经常遇到要分解质因数，那么如何快速分解质因数呢？ 在用筛法求素数时，我们使用线性筛的方法，并在每次筛的过程中，记录下每个数的最小质因数。那么在分解质因数的时候，只需要不断除以当前数的最小质因数，就可以快速得到分解的质因数了。 给出一个简单的例子，比如我们要求 50 这个数的质因数： 首先，利用线性筛找到所有的素数，并记录非素数的最小质因数，然后再将数字 50 除以他的最小质因">
 
 
 
 
 
 
-  <link rel="canonical" href="http://amosmeer.cn/archives/2019/01/">
+  <link rel="canonical" href="http://amosmeer.cn/2018/09/17/【数论】快速分解质因数的技巧 && 筛法求素数（快速筛）/">
 
 
 
@@ -177,7 +179,7 @@
   };
 </script>
 
-  <title>归档 | AmosMeer' blog</title>
+  <title>【数论】快速分解质因数的技巧 && 筛法求素数（快速筛） | AmosMeer' blog</title>
   
 
 
@@ -225,7 +227,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
     <a href="https://github.com/AmosMeer" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -393,276 +395,304 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://amosmeer.cn/2018/09/17/【数论】快速分解质因数的技巧 && 筛法求素数（快速筛）/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="AmosMeer">
+      <meta itemprop="description" content="Welcome to my blog.">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="AmosMeer' blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">【数论】快速分解质因数的技巧 && 筛法求素数（快速筛）
+
+              
+            
+          </h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-09-17 15:45:35" itemprop="dateCreated datePublished" datetime="2018-09-17T15:45:35+08:00">2018-09-17</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-03-25 16:56:46" itemprop="dateModified" datetime="2019-03-25T16:56:46+08:00">2019-03-25</time>
+              
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 18 篇日志。 继续努力。
-      </span>
-      
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/数论/" itemprop="url" rel="index"><span itemprop="name">数论</span></a></span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
 
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/01/17/【DFS、期望】 Codeforces Round 428 (Div. 2)/" itemprop="url">
+          
             
-              <span itemprop="name">【DFS、期望】 Codeforces Round 428 (Div. 2) C. Journey</span>
-            
-          </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-01-17T15:45:35+08:00" content="2019-01-17">
-          01-17
-        </time>
-      </div>
+          
+          
 
-    </header>
-  </article>
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
 
+          
+            <div class="post-symbolscount">
+              
 
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">1.2k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/01/09/利用 Github Pages 和 Hexo 初步搭建博客/" itemprop="url">
-            
-              <span itemprop="name">利用 Github Pages 和 Hexo 初步搭建博客</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-01-09T15:01:35+08:00" content="2019-01-09">
-          01-09
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/01/09/常见 Hexo 命令/" itemprop="url">
-            
-              <span itemprop="name">常见Hexo命令</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-01-09T15:01:35+08:00" content="2019-01-09">
-          01-09
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <h1 id="快速分解质因数"><a href="#快速分解质因数" class="headerlink" title="快速分解质因数"></a>快速分解质因数</h1><p>在做题时经常遇到要分解质因数，那么如何快速分解质因数呢？</p>
+<p>在用筛法求素数时，我们使用线性筛的方法，并在每次筛的过程中，记录下每个数的最小质因数。那么在分解质因数的时候，只需要不断除以当前数的最小质因数，就可以快速得到分解的质因数了。</p>
+<p>给出一个简单的例子，比如我们要求 50 这个数的质因数：</p>
+<p>首先，利用线性筛找到所有的素数，并记录非素数的最小质因数，然后再将数字 50 除以他的最小质因子（也就是2）得到 25，然后再将数字 25 除以他的最小质因子（也就是5）得到 5，到这为止就做完啦，50 的质因数就是 2 和 5。</p>
+<h1 id="筛法求素数"><a href="#筛法求素数" class="headerlink" title="筛法求素数"></a>筛法求素数</h1><h2 id="一般的线性筛法"><a href="#一般的线性筛法" class="headerlink" title="一般的线性筛法"></a>一般的线性筛法</h2><p>这种方法比较好理解：初始时，假设全部都是素数，当找到一个素数时，显然这个素数乘上另外一个数之后就一定是合数(注意上面的 i<em>i , 比 i</em>2 要快点 )，把这些合数都筛掉，即算法名字的由来。 但仔细分析能发现，这种方法会造成重复筛除合数，影响效率。比如10，在 i = 2 的时候，k = 2<em>15 筛了一次；在 i=5，k=5</em>6 的时候又筛了一次。所以，也就有了快速线性筛法。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">make_prime</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">memset</span>(prime, <span class="number">1</span>, <span class="keyword">sizeof</span>(prime));</span><br><span class="line">    prime[<span class="number">0</span>] = prime[<span class="number">1</span>] = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">2</span>;  i &lt; n;  i++) &#123;</span><br><span class="line">        <span class="keyword">if</span>(prime[i]) &#123;</span><br><span class="line">            primes[++cnt] = i;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = i * i; j &lt; n; j += i)</span><br><span class="line">                prime[j] = <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="快速线性筛法"><a href="#快速线性筛法" class="headerlink" title="快速线性筛法"></a>快速线性筛法</h2><p>快速线性筛法没有冗余，不会重复筛除一个数，所以“几乎”是线性的，虽然从代码上分析，时间复杂度并不是O(n)。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">GetPrime</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">2</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span>(!NotPrime[i]) prime[num_prime++] = i;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; num_prime &amp;&amp; i * prime[j] &lt; n; j++) &#123;</span><br><span class="line">            NotPrime[i*prime[j]] = <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span>(i % prime[j] == <span class="number">0</span>) <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/01/09/博客的功能配置/" itemprop="url">
-            
-              <span itemprop="name">博客的功能配置</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-01-09T15:01:35+08:00" content="2019-01-09">
-          01-09
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/01/09/利用 Github Pages 和 Hexo 搭建博客常见问题解决/" itemprop="url">
-            
-              <span itemprop="name">利用 Github Pages 和 Hexo 搭建博客常见问题解决</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-01-09T15:01:35+08:00" content="2019-01-09">
-          01-09
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/01/09/博客的美化配置（NexT主题）/" itemprop="url">
-            
-              <span itemprop="name">博客的美化配置（NexT主题）</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-01-09T15:01:35+08:00" content="2019-01-09">
-          01-09
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+
+    
+
+    
+    
+    
+
+    <div>
+      
+      ﻿<div>
+    
+        <div style="text-align:center;color: #ccc;font-size:18px;">-------------本文结束 <i class="fa fa-paw"></i> 感谢您的阅读-------------</div>
+    
+</div>
+     
+   </div>
+
+<div>
+      
+        ﻿
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/2018/09/17/【数论】快速分解质因数的技巧 && 筛法求素数（快速筛）/">【数论】快速分解质因数的技巧 && 筛法求素数（快速筛）</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 AmosMeer 的个人博客">AmosMeer</a></p>
+  <p><span>发布时间:</span>2018年09月17日 - 15:09</p>
+  <p><span>最后更新:</span>2019年03月25日 - 16:03</p>
+  <p><span>原始链接:</span><a href="/2018/09/17/【数论】快速分解质因数的技巧 && 筛法求素数（快速筛）/" title="【数论】快速分解质因数的技巧 && 筛法求素数（快速筛）">http://amosmeer.cn/2018/09/17/【数论】快速分解质因数的技巧 && 筛法求素数（快速筛）/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://amosmeer.cn/2018/09/17/【数论】快速分解质因数的技巧 && 筛法求素数（快速筛）/" aria-label="复制成功！"></i></span>
+  </p>
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+    });
+    });  
+</script>
+
+      
+</div>
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/分解质因数/" rel="tag"><i class="fa fa-tag"></i> 分解质因数</a>
+          
+            <a href="/tags/数论/" rel="tag"><i class="fa fa-tag"></i> 数论</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/08/24/字节跳动杯_2018中国大学生程序设计竞赛-女生专场/" rel="next" title="字节跳动杯_2018中国大学生程序设计竞赛-女生专场">
+                <i class="fa fa-chevron-left"></i> 字节跳动杯_2018中国大学生程序设计竞赛-女生专场
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/12/09/【线段树】 2018-2019 ICPC,NEERC,Southern Subregional Contest (Online Mirror, ACM-ICPC）C. Cloud Computing/" rel="prev" title="【线段树】 2018-2019 ICPC,NEERC,Southern Subregional Contest (Online Mirror, ACM-ICPC）C. Cloud Computing">
+                【线段树】 2018-2019 ICPC,NEERC,Southern Subregional Contest (Online Mirror, ACM-ICPC）C. Cloud Computing <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80MjEzOC8xODY4NQ=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -683,8 +713,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -786,6 +825,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#快速分解质因数"><span class="nav-number">1.</span> <span class="nav-text">快速分解质因数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#筛法求素数"><span class="nav-number">2.</span> <span class="nav-text">筛法求素数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一般的线性筛法"><span class="nav-number">2.1.</span> <span class="nav-text">一般的线性筛法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#快速线性筛法"><span class="nav-number">2.2.</span> <span class="nav-text">快速线性筛法</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -991,6 +1047,10 @@
 
 
   
+  <script src="/js/src/scrollspy.js?v=6.7.0"></script>
+<script src="/js/src/post-details.js?v=6.7.0"></script>
+
+
 
   
 
@@ -1000,6 +1060,23 @@
 
 
   
+  
+    <script>
+  window.livereOptions = {
+    refer: '2018/09/17/【数论】快速分解质因数的技巧 && 筛法求素数（快速筛）/'
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+</script>
+
+  
+
 
 
 
